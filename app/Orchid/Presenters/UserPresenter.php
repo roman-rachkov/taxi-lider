@@ -25,7 +25,7 @@ class UserPresenter extends Presenter implements Searchable, Personable
      */
     public function title(): string
     {
-        return $this->entity->name;
+        return $this->entity->name ?? '';
     }
 
     /**
@@ -53,7 +53,7 @@ class UserPresenter extends Presenter implements Searchable, Personable
      */
     public function image(): ?string
     {
-        $hash = md5(strtolower(trim($this->entity->email)));
+        $hash = md5(strtolower(trim($this->entity->email ?? '')));
 
         $default = urlencode('https://raw.githubusercontent.com/orchidsoftware/.github/main/web/avatars/gravatar.png');
 

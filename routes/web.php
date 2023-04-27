@@ -2,8 +2,8 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UserController;
+use App\Http\Middleware\CanConfirmPhoneMiddleware;
 use Illuminate\Foundation\Application;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
@@ -25,9 +25,20 @@ Route::get('/', function () {
 		'laravelVersion' => Application::VERSION,
 		'phpVersion' => PHP_VERSION,
 	]);
+})->name('home');
+
+Route::middleware(['guest'])->group(function () {
+	Route::get('/login', function () {
+		return Inertia::render('Login');
+	})->name('login');
+	Route::post('/confirm-phone', [UserController::class, 'enterByPhone'])->name('confirm-phone');
+	Route::post('/confirm-code', [UserController::class, 'confirmCode'])->name('confirm-code')->middleware([CanConfirmPhoneMiddleware::class]);
 });
 
-Route::post('/new-user', [UserController::class, 'enterByPhone'] )->name('new-user');
+Route::middleware(['auth'])->group(function (){
+	Route::get('/profile', [ProfileController::class, 'index'])->name('profile');
+	Route::post('/profile/upload', [ProfileController::class, 'upload'])->name('profile.upload');
+});
 
 //
 //Route::get('/dashboard', function () {

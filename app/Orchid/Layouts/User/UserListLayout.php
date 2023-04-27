@@ -33,11 +33,11 @@ class UserListLayout extends Table
                 ->filter(Input::make())
                 ->render(fn (User $user) => new Persona($user->presenter())),
 
-            TD::make('email', __('Email'))
+            TD::make('phone', __('Phone'))
                 ->sort()
                 ->cantHide()
                 ->filter(Input::make())
-                ->render(fn (User $user) => ModalToggle::make($user->email)
+                ->render(fn (User $user) => ModalToggle::make($user->phone)
                     ->modal('asyncEditUserModal')
                     ->modalTitle($user->presenter()->title())
                     ->method('saveUser')
