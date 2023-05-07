@@ -1,0 +1,62 @@
+@import "../../css/variables";
+
+.main {
+	width: 100vw;
+	height: calc(100vh - 101px);
+	max-height: 100vh;
+	position: relative;
+	overflow: hidden;
+
+	&__banner {
+		z-index: -1;
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: calc(3843px + 50%);
+		height: auto;//1425px;
+		min-width: 100vw;
+		object-fit: cover;
+		object-position: -1255px -242px;
+	}
+
+	&__offer {
+		position: absolute;
+		right: 0;
+		margin-top: 105px;
+	}
+
+	&__header {
+		text-align: right;
+	}
+
+	&__description{
+		text-align: right;
+		max-width: 490px;
+		margin-left: auto;
+		margin-bottom: 73px;
+	}
+	&__btn{
+		margin-left: auto;
+	}
+}
+
+.offer-header {
+	position: relative;
+	font-size: 90px;
+	letter-spacing: -6.8px;
+	margin-bottom: 57px;
+	&__small {
+		position: absolute;
+		right: 0;
+		top: -5px;
+		font-size: 40px;
+		letter-spacing: -3px;
+	}
+
+	&__cost {
+		color: $mainGold;
+		font-weight: 700;
+	}
+
+
+}

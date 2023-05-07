@@ -2,7 +2,7 @@ import React from "react";
 import InputMask from "react-input-mask";
 import { Head, useForm } from "@inertiajs/react";
 import MainLayout from "@/Layouts/MainLayout";
-import Header from "../../Components/Header";
+import HeaderTag from "../../Components/HeaderTag";
 
 const Login = () => {
 	const { data, setData, post, processing, progress } = useForm({ phone: "" });
@@ -14,7 +14,7 @@ const Login = () => {
 
 	return (
 		<MainLayout>
-			<Header>Вход/регистрация</Header>
+			<HeaderTag>Вход/регистрация</HeaderTag>
 			<form action="#" onSubmit={submit} className={"flex flex-col"}>
 				<InputMask
 					mask={"+7 (999) 999-99-99"}

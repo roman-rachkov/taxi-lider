@@ -1,6 +1,6 @@
 import React from "react";
 import MainLayout from "@/Layouts/MainLayout";
-import Header from "../../Components/Header";
+import HeaderTag from "../../Components/HeaderTag";
 import InputMask from "react-input-mask";
 import { useForm } from "@inertiajs/react";
 
@@ -14,7 +14,7 @@ const ConfirmCodeForm = () => {
 
 	return (
 		<MainLayout>
-			<Header>Подтвердить код</Header>
+			<HeaderTag>Подтвердить код</HeaderTag>
 			<form action="#" onSubmit={submit} className={"flex flex-col"}>
 				<InputMask
 					mask={"9999"}
