@@ -1,0 +1,11 @@
+@import "../../css/variables";
+
+.achievements{
+	padding: 110px 0 80px;
+	&__items{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+	}
+}

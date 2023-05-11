@@ -4,6 +4,11 @@ import react from "@vitejs/plugin-react";
 import ViteWebp from "vite-plugin-webp-generator";
 
 export default defineConfig({
+	server: {
+		hmr: {
+			host: "localhost",
+		},
+	},
 	plugins: [
 		ViteWebp({
 			extensions: ["png", "jpg", "jpeg"],

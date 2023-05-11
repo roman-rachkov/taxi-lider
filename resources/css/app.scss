@@ -54,7 +54,13 @@ a{
 	color: white;
 	border-radius: 5px;
 	line-height: 17px;
+	outline: none;
+	border: none;
 	&:hover{
 		background-color: $lightenGold;
+		cursor: pointer;
 	}
+}
+.gold{
+	color: $mainGold;
 }

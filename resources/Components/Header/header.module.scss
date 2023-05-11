@@ -5,7 +5,7 @@
 	left: 0;
 	background: #ffffff;
 	transition: all .4s;
-
+	z-index: 50;
 	&::after {
 		content: '';
 		display: block;

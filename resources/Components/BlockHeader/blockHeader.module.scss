@@ -1,0 +1,20 @@
+@import "../../css/variables";
+
+.block-header{
+	text-align: center;
+	font-size: 90px;
+	font-weight: bold;
+	color: $mainGold;
+	position: relative;
+	margin-bottom: 115px;
+	&:after{
+		content: '?';
+		font-size: 300px;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		//z-index: -1;
+		color: $superLightGold;
+	}
+}

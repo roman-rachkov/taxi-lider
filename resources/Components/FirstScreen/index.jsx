@@ -1,6 +1,6 @@
 import React from "react";
 import banner from "../../images/banner.webp";
-import HeaderTag from "../HeaderTag";
+import BlockHeader from "../BlockHeader";
 import classes from "./screen.module.scss";
 import { Link } from "@inertiajs/react";
 
@@ -30,16 +30,6 @@ const FirstScreen = () => {
 					<Link href="#" className={["btn", classes.main__btn].join(" ")}>
 						Начать работать
 					</Link>
-					{/*<HeaderTag>Таксопарк Лидер</HeaderTag>*/}
-					{/*<p className="main__info">*/}
-					{/*	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta*/}
-					{/*	excepturi laborum laudantium odit, praesentium quam reiciendis rem*/}
-					{/*	repudiandae sed sunt vel vero! At deserunt enim excepturi expedita,*/}
-					{/*	magni quia velit.*/}
-					{/*</p>*/}
-					{/*<button className={"main__reg-btn rounded-lg border px-3 py-2"}>*/}
-					{/*	Начать работать*/}
-					{/*</button>*/}
 				</div>
 			</div>
 		</article>

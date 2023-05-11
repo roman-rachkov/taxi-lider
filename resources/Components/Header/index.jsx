@@ -9,11 +9,11 @@ const Header = () => {
 	const headerRef = useRef(null);
 
 	const scrollChangeHandler = (e) => {
-		let scrollTop = window.pageYOffset;
-		if (scrollTop >= 150) {
+		console.log(window.pageYOffset);
+		if (window.pageYOffset > 160) {
 			headerRef.current.classList.add(classes.scrolled);
 		}
-		if (scrollTop < 150) {
+		if (window.pageYOffset < 140) {
 			headerRef.current.classList.remove(classes.scrolled);
 		}
 	};

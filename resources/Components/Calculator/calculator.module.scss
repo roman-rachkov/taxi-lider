@@ -1,0 +1,58 @@
+@import "../../css/variables";
+
+.calculator {
+	background-color: $mainDark;
+	padding: 120px 0 80px;
+	color: $mainGold;
+
+	&__blocks{
+		display: flex;
+		justify-content: space-around;
+	}
+	&__wrapper{
+		display: flex;
+	}
+	&__block {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__header {
+		display: block;
+		text-align: center;
+		margin-bottom: 40px;
+	}
+
+	&__btn {
+		padding: 0;
+		margin: 0;
+		width: 60px;
+		height: 60px;
+		font-size: 90px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		line-height: 0;
+		&-left{
+			border-top-right-radius: 0;
+			border-bottom-right-radius: 0;
+		}
+		&-right{
+			border-top-left-radius: 0;
+			border-bottom-left-radius: 0;
+		}
+	}
+
+	&__label {
+		background-color: $white;
+		color: $mainDark;
+		margin: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 22px 0;
+		font-size: 24px;
+		line-height: 15px;
+		width: 225px;
+	}
+}

@@ -1,6 +1,6 @@
 import React from "react";
 import MainLayout from "@/Layouts/MainLayout";
-import HeaderTag from "../../Components/HeaderTag";
+import BlockHeader from "../../Components/BlockHeader/blockHeader";
 import { useForm } from "@inertiajs/react";
 
 const Profile = ({ auth }) => {
@@ -14,7 +14,7 @@ const Profile = ({ auth }) => {
 	};
 	return (
 		<MainLayout>
-			<HeaderTag>Профиль пользователя {auth.user.phone}</HeaderTag>
+			<BlockHeader>Профиль пользователя {auth.user.phone}</BlockHeader>
 			<form action="#" onSubmit={submit}>
 				<label className="block">
 					<input
